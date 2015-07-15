@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Local Content</title>
+    </head>
+
+    <body>
+        <h1>Take a look at these wonderful Venues!!!</h1>
+        {% if venues %}
+            <ul>
+                {% for venue in venues %}
+                <li>
+                    <a href="{{ venue.url }}">{{ venue.name }}</a> <br />
+                    Address: {{venue.address}} <br /> Genre: {{venue.sub_category}}
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no venues present.</strong>
+        {% endif %}
+    </body>
+
+</html>
